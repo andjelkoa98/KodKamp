@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+:root {
+    --primaryColor: rgb(2, 190, 206);
+    --secondaryColor: rgb(43, 51, 61);
+    --textColor: rgb(30, 51, 61);
+    --white: #fff;
+    --font: 'Source Sans Pro', sans-serif;
+    --fontSize: 16px;
+    --transition: .3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    font-family: var(--font);
+    font-size: var(--fontSize);
+}
+.container {
+    width: 60%;
+    margin: auto;
+}
+button {
+    padding: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: var(--transition);
+}
+button:hover {
+    color: var(--textColor);
+    background: var(--white);
+}
+main {
+    width: 80%;
+    margin: 80px auto;
+}
+/******************
+header
+******************/
+header {
+    background: url(../img/kamp1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+}
+header article {
+    background: linear-gradient(to right, rgba(43, 51, 61, .7), rgba(2, 190, 206, .8));
+    border-radius: 10px;
+    padding: 40px;
+    color: var(--white);
+    text-align: center;
+}
+header article h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+header article h1 span {
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgb(156, 156, 156);
+}
+header article p {
+    font-size: .8rem;
+    padding-top: 5px;
+}
+/******************
+about
+******************/
+.about {
+    background: var(--white);
+    text-align: center;
+    padding: 50px 0;
+}
+.about h2 {
+    font-size: 2.5rem;
+    color: var(--primaryColor);
+    text-shadow: 0 0 3px var(--textColor);
+}
+.about h2 + p {
+    margin: 10px 0 20px 0;
+}
+.about p {
+    font-weight: 400;
+}
+/******************
+description
+******************/
+.description{
+    display: flex;
+}
+.description .text {
+    background: var(--primaryColor);
+    flex: 0 0 55%;
+    padding: 60px;
+}
+.description .text h3 {
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 1.2rem;
+    text-shadow: 0 0 3px var(--textColor);
+    padding-bottom: 20px;
+}
+.description .text p {
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+.description .picture {
+    flex: 0 0 45%;
+    background: url(../img/kamp5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/******************
+why
+******************/
+.why {
+    background-color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+.why h2 {
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-shadow: 1px 0 3px var(--textColor);
+    margin-bottom: 15px;
+}
+.why p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+/******************
+footer
+******************/
+footer {
+    background: linear-gradient(to right, rgb(75, 87, 102), rgb(22, 201, 218));
+    padding: 80px 0;
+    text-align: center;
+}
+footer h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+footer p {
+    font-weight: 400;
+}
+footer input {
+    padding: 15px;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    width: 400px;
+    background: transparent;
+    outline: none;
+    color: var(--white);
+}
+footer input::placeholder {
+    color: var(--textColor);
+    font-size: 1rem;
+}
+/******************
+r e s p o n s i v e
+******************/
+@media (max-width:768px){
+    main {
+        width: 95%;
+        margin: 30px auto;
+    }
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+    header {
+        padding: 30px 0;
+    }
+    header article h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+    .about h2 {
+        font-size: 1.7rem;
+    }
+    .description{
+        flex-direction: column;
+    }
+    .description .text {
+        text-align: center;
+        padding: 30px;
+    }
+    .why {
+        padding: 40px 20px;
+    }
+    .why h2 {
+        font-size: 1.2rem;
+    }
+    footer {
+        padding: 20px;
+    }
+    footer h2 {
+        font-size: 1.7rem;
+    }
+    footer p {
+        font-size: .9rem;
+    }
+    footer input {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
